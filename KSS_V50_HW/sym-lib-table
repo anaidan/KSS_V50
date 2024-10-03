@@ -1,0 +1,6 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "ap_built")(type "KiCad")(uri "${KIPRJMOD}/ap_built.kicad_sym")(options "")(descr ""))
+  (lib (name "TMC2300-LA-T")(type "KiCad")(uri "C:/Users/aidan/Downloads/TMC2300-LA-T/TMC2300-LA-T.kicad_sym")(options "")(descr ""))
+  (lib (name "TMC2300")(type "KiCad")(uri "${KIPRJMOD}/TMC2300.kicad_sym")(options "")(descr ""))
+)

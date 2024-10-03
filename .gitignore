@@ -1,6 +1,6 @@
-.op
-.plt
-.raw
-.log
-Solar\ Panel\ Modeling/.ipynb_checkpoints/
+*.op
+*.plt
+*.raw
+*.log
+Solar_Panel_Modeling/.ipynb_checkpoints/
 KSS_V50_HW/KSS_V50-backups/

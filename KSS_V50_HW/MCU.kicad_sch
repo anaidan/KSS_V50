@@ -4756,6 +4756,24 @@
 				(hide yes)
 			)
 		)
+		(property "DPN" "563-1035-1-ND"
+			(at 105.41 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "CS-4-13NTA "
+			(at 105.41 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "4"
 			(uuid "d0e636e4-5d49-48a2-b071-72c60dc8ba43")
 		)

@@ -3805,7 +3805,7 @@
 				)
 			)
 		)
-		(property "DCR" "67 Ohm"
+		(property "DCR" "67 mOhm"
 			(at 128.778 84.074 90)
 			(effects
 				(font

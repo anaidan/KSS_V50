@@ -2147,6 +2147,16 @@
 	)
 	(wire
 		(pts
+			(xy 236.22 96.52) (xy 243.84 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "14cdc4f9-c18d-4b0c-bdbd-d54373e67c98")
+	)
+	(wire
+		(pts
 			(xy 134.62 138.43) (xy 139.7 138.43)
 		)
 		(stroke
@@ -2164,6 +2174,16 @@
 			(type default)
 		)
 		(uuid "17ac417f-fefe-4ae5-a3ba-a765afc78a95")
+	)
+	(wire
+		(pts
+			(xy 236.22 88.9) (xy 243.84 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "195a7b7c-03d1-4ff0-ade7-3c23d80b69f2")
 	)
 	(wire
 		(pts
@@ -2367,6 +2387,16 @@
 	)
 	(wire
 		(pts
+			(xy 236.22 91.44) (xy 243.84 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "64b409eb-d64c-4218-9178-ab1d54feeec5")
+	)
+	(wire
+		(pts
 			(xy 180.34 118.11) (xy 180.34 120.65)
 		)
 		(stroke
@@ -2417,6 +2447,16 @@
 	)
 	(wire
 		(pts
+			(xy 236.22 93.98) (xy 243.84 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6f425980-3928-49cf-8e82-5dfb7ab36efb")
+	)
+	(wire
+		(pts
 			(xy 115.57 102.87) (xy 137.16 102.87)
 		)
 		(stroke
@@ -2437,7 +2477,7 @@
 	)
 	(wire
 		(pts
-			(xy 232.41 109.22) (xy 240.03 109.22)
+			(xy 236.22 109.22) (xy 243.84 109.22)
 		)
 		(stroke
 			(width 0)
@@ -2517,7 +2557,7 @@
 	)
 	(wire
 		(pts
-			(xy 232.41 106.68) (xy 240.03 106.68)
+			(xy 236.22 106.68) (xy 243.84 106.68)
 		)
 		(stroke
 			(width 0)
@@ -2687,7 +2727,7 @@
 	)
 	(wire
 		(pts
-			(xy 232.41 104.14) (xy 240.03 104.14)
+			(xy 236.22 104.14) (xy 243.84 104.14)
 		)
 		(stroke
 			(width 0)
@@ -2727,7 +2767,7 @@
 	)
 	(wire
 		(pts
-			(xy 232.41 101.6) (xy 240.03 101.6)
+			(xy 236.22 101.6) (xy 243.84 101.6)
 		)
 		(stroke
 			(width 0)
@@ -2964,8 +3004,7 @@
 		(uuid "9c95be73-d2dd-4cb3-b2f0-c2114cf3576b")
 	)
 	(label "OA1"
-		(at 232.41 101.6 0)
-		(fields_autoplaced yes)
+		(at 236.22 101.6 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2976,7 +3015,6 @@
 	)
 	(label "VIO"
 		(at 139.7 138.43 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2987,7 +3025,6 @@
 	)
 	(label "EN"
 		(at 107.95 133.35 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2998,7 +3035,6 @@
 	)
 	(label "MS1"
 		(at 121.92 82.55 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3009,7 +3045,6 @@
 	)
 	(label "MODE"
 		(at 121.92 80.01 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3020,7 +3055,6 @@
 	)
 	(label "MS2"
 		(at 86.36 143.51 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3031,7 +3065,6 @@
 	)
 	(label "STEPPER"
 		(at 121.92 87.63 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3040,9 +3073,18 @@
 		)
 		(uuid "299451b7-0013-4507-a79d-aeba82561947")
 	)
+	(label "OB1"
+		(at 236.22 93.98 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "2c4cab1a-ae97-45a9-96f2-5a347ff84432")
+	)
 	(label "MODE"
 		(at 146.05 149.86 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3053,7 +3095,6 @@
 	)
 	(label "STEPPER"
 		(at 146.05 144.78 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3064,7 +3105,6 @@
 	)
 	(label "1.8VOUT"
 		(at 121.92 95.25 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3075,7 +3115,6 @@
 	)
 	(label "VIO"
 		(at 190.5 110.49 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3084,9 +3123,18 @@
 		)
 		(uuid "4f8b1ce3-5efc-45dc-80e8-d0772fce31e8")
 	)
+	(label "OA1"
+		(at 236.22 88.9 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "503fb79e-68ff-4b13-961d-59f166bc6d1f")
+	)
 	(label "DIR"
 		(at 96.52 133.35 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3097,7 +3145,6 @@
 	)
 	(label "STEP"
 		(at 97.79 100.33 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3108,7 +3155,6 @@
 	)
 	(label "STEP"
 		(at 119.38 133.35 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3119,7 +3165,6 @@
 	)
 	(label "OA1"
 		(at 191.77 80.01 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3130,7 +3175,6 @@
 	)
 	(label "DIR"
 		(at 97.79 102.87 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3140,8 +3184,7 @@
 		(uuid "6ade7731-1550-40d9-a111-4503af63c3eb")
 	)
 	(label "OB2"
-		(at 232.41 109.22 0)
-		(fields_autoplaced yes)
+		(at 236.22 109.22 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3150,9 +3193,18 @@
 		)
 		(uuid "70aa9a07-ea4d-4de1-be84-88166dcabe24")
 	)
+	(label "OB2"
+		(at 236.22 96.52 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "8aaefde4-9f74-41d1-9143-302de8e371bb")
+	)
 	(label "MS2"
 		(at 121.92 85.09 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3162,8 +3214,17 @@
 		(uuid "8b774aac-4d36-4c50-81ae-5eb6ea45c260")
 	)
 	(label "OA2"
-		(at 232.41 104.14 0)
-		(fields_autoplaced yes)
+		(at 236.22 91.44 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "996c5753-51c7-4278-8d61-d86661f36084")
+	)
+	(label "OA2"
+		(at 236.22 104.14 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3174,7 +3235,6 @@
 	)
 	(label "EN"
 		(at 97.79 77.47 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3185,7 +3245,6 @@
 	)
 	(label "OA2"
 		(at 191.77 82.55 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3196,7 +3255,6 @@
 	)
 	(label "MS1"
 		(at 67.31 143.51 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3207,7 +3265,6 @@
 	)
 	(label "OB1"
 		(at 191.77 90.17 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3218,7 +3275,6 @@
 	)
 	(label "OB2"
 		(at 191.77 92.71 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3228,8 +3284,7 @@
 		(uuid "dfc7f449-13c7-4688-bcf7-32038631e4e1")
 	)
 	(label "OB1"
-		(at 232.41 106.68 0)
-		(fields_autoplaced yes)
+		(at 236.22 106.68 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3240,7 +3295,6 @@
 	)
 	(label "1.8VOUT"
 		(at 166.37 133.35 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3251,7 +3305,6 @@
 	)
 	(label "VIO"
 		(at 132.08 25.4 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3262,7 +3315,6 @@
 	)
 	(label "VIO"
 		(at 81.28 135.89 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3273,7 +3325,6 @@
 	)
 	(label "VIO"
 		(at 62.23 135.89 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3285,7 +3336,6 @@
 	(hierarchical_label "DIR"
 		(shape input)
 		(at 95.25 102.87 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3297,7 +3347,6 @@
 	(hierarchical_label "HALL_OUT"
 		(shape output)
 		(at 224.79 29.21 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3309,7 +3358,6 @@
 	(hierarchical_label "EN"
 		(shape input)
 		(at 95.25 77.47 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3321,7 +3369,6 @@
 	(hierarchical_label "STEP"
 		(shape input)
 		(at 95.25 100.33 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3333,7 +3380,6 @@
 	(hierarchical_label "VIO_MOT"
 		(shape input)
 		(at 201.93 110.49 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3447,6 +3493,15 @@
 			)
 		)
 		(property "DKN" ""
+			(at 158.75 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC_PN" "C92490"
 			(at 158.75 140.97 0)
 			(effects
 				(font
@@ -3571,6 +3626,15 @@
 				(hide yes)
 			)
 		)
+		(property "JLC_PN" "C114626"
+			(at 191.77 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "7bef97c3-1f7d-4391-94c4-823bcae2792c")
 		)
@@ -3615,7 +3679,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_DFN_QFN:QFN-20-1EP_3x3mm_P0.4mm_EP1.65x1.65mm"
+		(property "Footprint" "ap_built:QFN-20-1EP_3x3mm_P0.4mm_EP1.65x1.65mm"
 			(at 156.972 35.052 0)
 			(effects
 				(font
@@ -4083,7 +4147,25 @@
 				(hide yes)
 			)
 		)
-		(property "DKN" ""
+		(property "DPN" "175-TMC2300-LA-TCT-ND"
+			(at 157.48 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "TMC2300-LA-T"
+			(at 157.48 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC_PN" "C516356"
 			(at 157.48 95.25 0)
 			(effects
 				(font
@@ -4303,6 +4385,15 @@
 				(hide yes)
 			)
 		)
+		(property "JLC_PN" ""
+			(at 58.42 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "f6218e4b-9bb0-4e28-a3da-31b514e61e75")
 		)
@@ -4430,6 +4521,15 @@
 			)
 		)
 		(property "DKN" ""
+			(at 212.09 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC_PN" "C92490"
 			(at 212.09 80.01 0)
 			(effects
 				(font
@@ -4694,6 +4794,15 @@
 				(hide yes)
 			)
 		)
+		(property "JLC_PN" "C116677"
+			(at 111.76 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "0ce83ccf-5e02-4e95-ab88-db77edffab9b")
 		)
@@ -4770,6 +4879,15 @@
 			)
 		)
 		(property "DKN" ""
+			(at 77.47 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC_PN" ""
 			(at 77.47 143.51 0)
 			(effects
 				(font
@@ -5038,6 +5156,15 @@
 				(hide yes)
 			)
 		)
+		(property "JLC_PN" "C116677"
+			(at 111.76 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "d66e0a27-fba6-4b42-babb-65ee72f7bec8")
 		)
@@ -5163,6 +5290,15 @@
 			)
 		)
 		(property "DKN" ""
+			(at 137.16 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC_PN" "C92490"
 			(at 137.16 35.56 0)
 			(effects
 				(font
@@ -5349,6 +5485,15 @@
 			)
 		)
 		(property "DKN" ""
+			(at 123.19 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC_PN" "C105578"
 			(at 123.19 142.24 0)
 			(effects
 				(font
@@ -5544,6 +5689,15 @@
 				(hide yes)
 			)
 		)
+		(property "JLC_PN" "C116677"
+			(at 111.76 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "b072ea95-34fe-4284-8ba5-0c7e14d15570")
 		)
@@ -5652,6 +5806,15 @@
 			)
 		)
 		(property "DKN" ""
+			(at 100.33 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC_PN" "C105578"
 			(at 100.33 142.24 0)
 			(effects
 				(font
@@ -5769,6 +5932,15 @@
 			)
 		)
 		(property "DKN" ""
+			(at 175.26 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC_PN" "C116677"
 			(at 175.26 45.72 0)
 			(effects
 				(font
@@ -6085,6 +6257,15 @@
 				(hide yes)
 			)
 		)
+		(property "JLC_PN" "C5220641"
+			(at 157.48 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "4"
 			(uuid "4be39d55-a29f-4501-b042-387daedb5958")
 		)
@@ -6118,7 +6299,7 @@
 	)
 	(symbol
 		(lib_id "Connector:Conn_01x04_Socket")
-		(at 245.11 104.14 0)
+		(at 248.92 104.14 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6126,8 +6307,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b3202a5d-b02d-428a-b915-ab19179ec565")
-		(property "Reference" "J3"
-			(at 246.38 104.1399 0)
+		(property "Reference" "J2"
+			(at 250.19 104.1399 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6136,7 +6317,7 @@
 			)
 		)
 		(property "Value" "Conn_01x04_Socket"
-			(at 246.38 106.6799 0)
+			(at 250.19 106.6799 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6145,7 +6326,7 @@
 			)
 		)
 		(property "Footprint" "ap_built:Motor_Header"
-			(at 245.11 104.14 0)
+			(at 248.92 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6154,7 +6335,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 245.11 104.14 0)
+			(at 248.92 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6163,7 +6344,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x04, script generated"
-			(at 245.11 104.14 0)
+			(at 248.92 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6172,7 +6353,16 @@
 			)
 		)
 		(property "DKN" ""
-			(at 245.11 104.14 0)
+			(at 248.92 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC_PN" ""
+			(at 248.92 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6259,7 +6449,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "GRM21BZ71E106KE15L"
+		(property "MPN" "GRM21BR61C106KE15K"
 			(at 224.79 80.01 0)
 			(effects
 				(font
@@ -6268,7 +6458,7 @@
 				(hide yes)
 			)
 		)
-		(property "DPN" "490-GRM21BZ71E106KE15LCT-ND"
+		(property "DPN" "490-6473-1-ND"
 			(at 224.79 80.01 0)
 			(effects
 				(font
@@ -6285,7 +6475,7 @@
 				)
 			)
 		)
-		(property "Dialectric" "X7R"
+		(property "Dialectric" "X5R"
 			(at 230.124 79.502 0)
 			(effects
 				(font
@@ -6293,7 +6483,7 @@
 				)
 			)
 		)
-		(property "Voltage Rating" "25V"
+		(property "Voltage Rating" "16V"
 			(at 229.87 81.28 0)
 			(effects
 				(font
@@ -6310,6 +6500,15 @@
 			)
 		)
 		(property "DKN" ""
+			(at 224.79 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC_PN" "C237493"
 			(at 224.79 80.01 0)
 			(effects
 				(font
@@ -6402,6 +6601,122 @@
 				)
 				(path "/5c9f67fe-e435-446d-874d-cb2b418c1757/d0ef6367-c661-4a89-a602-0ea067e66aca"
 					(reference "#PWR069")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Conn_01x04_Socket")
+		(at 248.92 91.44 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c771d350-8578-477c-8a07-648175792dca")
+		(property "Reference" "J7"
+			(at 250.19 91.4399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Conn_01x04_Socket"
+			(at 250.19 93.9799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Connector_Molex:Molex_PicoBlade_53261-0471_1x04-1MP_P1.25mm_Horizontal"
+			(at 248.92 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 248.92 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x04, script generated"
+			(at 248.92 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "DKN" ""
+			(at 248.92 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "0532610471"
+			(at 248.92 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "DPN" "WM7622CT-ND"
+			(at 248.92 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC_PN" "C5119769"
+			(at 248.92 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a27729d7-8f55-422d-be75-2e4faa41cd5e")
+		)
+		(pin "4"
+			(uuid "1b9998a6-fd4b-4418-8d3f-f26347f0c216")
+		)
+		(pin "2"
+			(uuid "8348de1f-d0d6-4da2-bd07-2ff8b91d91ca")
+		)
+		(pin "3"
+			(uuid "c932524e-ca6c-4385-8c4e-85912e948f9e")
+		)
+		(instances
+			(project "KSS_V50"
+				(path "/5c9f67fe-e435-446d-874d-cb2b418c1757/0d86d4bb-e28c-44ac-a34e-0bd1cf7db6da"
+					(reference "J7")
+					(unit 1)
+				)
+				(path "/5c9f67fe-e435-446d-874d-cb2b418c1757/d0ef6367-c661-4a89-a602-0ea067e66aca"
+					(reference "J8")
 					(unit 1)
 				)
 			)
@@ -6566,6 +6881,15 @@
 			)
 		)
 		(property "DKN" ""
+			(at 191.77 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC_PN" "C114626"
 			(at 191.77 85.09 0)
 			(effects
 				(font
@@ -6821,6 +7145,15 @@
 			)
 		)
 		(property "DKN" ""
+			(at 111.76 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC_PN" "C105578"
 			(at 111.76 142.24 0)
 			(effects
 				(font
@@ -7162,6 +7495,15 @@
 			)
 		)
 		(property "DKN" ""
+			(at 190.5 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC_PN" "C92490"
 			(at 190.5 118.11 0)
 			(effects
 				(font

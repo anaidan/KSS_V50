@@ -2579,7 +2579,6 @@
 	)
 	(label "SDA"
 		(at 168.91 102.87 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2590,7 +2589,6 @@
 	)
 	(label "MODE_SW_1"
 		(at 172.72 107.95 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2601,7 +2599,6 @@
 	)
 	(label "MOT_STBY"
 		(at 187.96 53.34 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2612,7 +2609,6 @@
 	)
 	(label "SCL"
 		(at 140.97 41.91 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2623,7 +2619,6 @@
 	)
 	(label "MCU_TX"
 		(at 172.72 80.01 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2634,7 +2629,6 @@
 	)
 	(label "SDA"
 		(at 160.02 41.91 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2645,7 +2639,6 @@
 	)
 	(label "MODE_SW_2"
 		(at 87.63 144.78 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2656,7 +2649,6 @@
 	)
 	(label "MODE_SW_1"
 		(at 87.63 142.24 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2667,7 +2659,6 @@
 	)
 	(label "CAP_SNS_OUT"
 		(at 152.4 148.59 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2678,7 +2669,6 @@
 	)
 	(label "MCU_RX"
 		(at 172.72 82.55 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2689,7 +2679,6 @@
 	)
 	(label "SCL"
 		(at 168.91 100.33 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2700,7 +2689,6 @@
 	)
 	(label "CAP_SNS_OUT"
 		(at 111.76 105.41 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2711,7 +2699,6 @@
 	)
 	(label "MOT_STBY"
 		(at 111.76 107.95 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2722,7 +2709,6 @@
 	)
 	(label "MODE_SW_2"
 		(at 172.72 110.49 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2734,7 +2720,6 @@
 	(hierarchical_label "MOT_EN_1"
 		(shape output)
 		(at 109.22 102.87 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2746,7 +2731,6 @@
 	(hierarchical_label "MOT_STEP_2"
 		(shape output)
 		(at 185.42 95.25 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2758,7 +2742,6 @@
 	(hierarchical_label "MPPT_SHDN"
 		(shape output)
 		(at 185.42 113.03 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2770,7 +2753,6 @@
 	(hierarchical_label "MCU_UPDI"
 		(shape bidirectional)
 		(at 185.42 77.47 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2782,7 +2764,6 @@
 	(hierarchical_label "HALL_IN_2"
 		(shape input)
 		(at 185.42 90.17 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2794,7 +2775,6 @@
 	(hierarchical_label "VIO_MOT"
 		(shape output)
 		(at 226.06 38.1 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2806,7 +2786,6 @@
 	(hierarchical_label "SDA"
 		(shape input)
 		(at 185.42 102.87 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2818,7 +2797,6 @@
 	(hierarchical_label "SCL"
 		(shape input)
 		(at 185.42 100.33 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2830,7 +2808,6 @@
 	(hierarchical_label "MCU_RX"
 		(shape input)
 		(at 185.42 82.55 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2842,7 +2819,6 @@
 	(hierarchical_label "MOT_EN_2"
 		(shape output)
 		(at 185.42 92.71 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2854,7 +2830,6 @@
 	(hierarchical_label "MOT_STEP_1"
 		(shape output)
 		(at 185.42 85.09 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2866,7 +2841,6 @@
 	(hierarchical_label "MCU_TX"
 		(shape output)
 		(at 185.42 80.01 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2878,7 +2852,6 @@
 	(hierarchical_label "MOT_DIR_1"
 		(shape output)
 		(at 185.42 87.63 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2890,7 +2863,6 @@
 	(hierarchical_label "HALL_IN_1"
 		(shape input)
 		(at 109.22 100.33 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2902,7 +2874,6 @@
 	(hierarchical_label "MOT_DIR_2"
 		(shape output)
 		(at 185.42 105.41 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3000,6 +2971,15 @@
 			)
 		)
 		(property "DKN" ""
+			(at 154.94 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC_PN" "C105580"
 			(at 154.94 34.29 0)
 			(effects
 				(font
@@ -3185,6 +3165,15 @@
 				(hide yes)
 			)
 		)
+		(property "JLC_PN" "C105578"
+			(at 73.66 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "53ea6d02-15c4-4cc9-882f-647aaac784ca")
 		)
@@ -3255,6 +3244,15 @@
 			)
 		)
 		(property "DKN" ""
+			(at 243.84 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC_PN" ""
 			(at 243.84 143.51 0)
 			(effects
 				(font
@@ -3375,6 +3373,15 @@
 				(hide yes)
 			)
 		)
+		(property "JLC_PN" "C105580"
+			(at 179.07 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "b6647dab-ce4c-439e-b84a-c75f45ef5467")
 		)
@@ -3461,6 +3468,15 @@
 				(hide yes)
 			)
 		)
+		(property "JLC_PN" "C146367"
+			(at 212.09 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "3"
 			(uuid "705e4b30-8cd5-435a-9b16-df7e99d4daab")
 		)
@@ -3536,6 +3552,24 @@
 			)
 		)
 		(property "DPN" "150-ATTINY3226-XF-ND "
+			(at 140.97 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "ATTINY3226-XF "
+			(at 140.97 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC_PN" "C3235640"
 			(at 140.97 95.25 0)
 			(effects
 				(font
@@ -3973,6 +4007,15 @@
 				(hide yes)
 			)
 		)
+		(property "JLC_PN" "C105580"
+			(at 135.89 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "e1ab410a-d5b4-4bc3-8595-40be0d8b9f31")
 		)
@@ -4102,6 +4145,15 @@
 				(hide yes)
 			)
 		)
+		(property "JLC_PN" "C519404"
+			(at 170.18 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "9c579cf8-a304-46d4-a0e7-cd42bda77890")
 		)
@@ -4222,6 +4274,15 @@
 			)
 		)
 		(property "DKN" ""
+			(at 201.93 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC_PN" "C92490"
 			(at 201.93 128.27 0)
 			(effects
 				(font
@@ -4756,6 +4817,33 @@
 				(hide yes)
 			)
 		)
+		(property "MPN" "CS-4-13NTA"
+			(at 105.41 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "DPN" "563-1035-1-ND"
+			(at 105.41 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC_PN" "C2921702 Copy "
+			(at 105.41 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "4"
 			(uuid "d0e636e4-5d49-48a2-b071-72c60dc8ba43")
 		)
@@ -4851,6 +4939,15 @@
 			)
 		)
 		(property "DKN" ""
+			(at 195.58 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC_PN" "C74512"
 			(at 195.58 146.05 0)
 			(effects
 				(font
@@ -4983,6 +5080,15 @@
 				(hide yes)
 			)
 		)
+		(property "JLC_PN" "C105580"
+			(at 229.87 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "a9b4fe38-8a74-470d-8ead-6876820ebc1f")
 		)
@@ -5087,6 +5193,15 @@
 			)
 		)
 		(property "DKN" ""
+			(at 83.82 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC_PN" "C105578"
 			(at 83.82 133.35 0)
 			(effects
 				(font
@@ -5216,6 +5331,15 @@
 			)
 		)
 		(property "DKN" ""
+			(at 119.38 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC_PN" "C92490"
 			(at 119.38 72.39 0)
 			(effects
 				(font
@@ -5482,6 +5606,15 @@
 				(hide yes)
 			)
 		)
+		(property "JLC_PN" "C113811"
+			(at 215.9 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "30ebba62-7427-4bc1-8d13-28708d03f35b")
 		)
@@ -5586,6 +5719,15 @@
 			)
 		)
 		(property "DKN" ""
+			(at 204.47 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC_PN" "C105578"
 			(at 204.47 45.72 0)
 			(effects
 				(font

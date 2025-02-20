@@ -1,4 +1,4 @@
-23702277656256720
+23709243229825220
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -96411,6 +96411,13 @@ Varistor VF
 2
 2
 ap_built
+24929
+
+
+0
+1
+1
+ap_built
 AMDLA1306Q-470MT
 
 
@@ -96446,6 +96453,13 @@ KXOB201K04F-TR
 2
 2
 ap_built
+L_Murata_DFE201610P
+Inductor, Murata, DFE201610P, 2.0x1.6x1.0mm, https://www.murata.com/~/media/webrenewal/products/inductor/chip/tokoproducts/wirewoundmetalalloychiptype/m_dfe201610p.ashx
+Inductor power chip flatwire
+0
+2
+2
+ap_built
 Motor_Header
 
 
@@ -96453,12 +96467,26 @@ Motor_Header
 4
 4
 ap_built
+QFN-20-1EP_3x3mm_P0.4mm_EP1.65x1.65mm
+QFN, 20 Pin (https://www.analog.com/media/en/technical-documentation/data-sheets/3553fc.pdf#page=34), generated with kicad-footprint-generator ipc_noLead_generator.py
+QFN NoLead
+0
+25
+21
+ap_built
 QFN40P300X300X90-21N
 
 
 0
 21
 21
+ap_built
+SM101K07L
+
+
+0
+2
+2
 ap_built
 SM141K04TFS
 

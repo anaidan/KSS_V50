@@ -1,0 +1,10 @@
+Version 4
+SymbolType BLOCK
+RECTANGLE Normal 64 48 -64 -48
+TEXT -55 -1 Left 1 SM141K04TFS
+PIN -64 0 NONE 8
+PINATTR PinName Illu
+PINATTR SpiceOrder 1
+PIN 64 0 NONE 8
+PINATTR PinName Vout
+PINATTR SpiceOrder 2

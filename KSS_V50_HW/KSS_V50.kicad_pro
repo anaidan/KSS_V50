@@ -58,7 +58,9 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        "lib_footprint_mismatch|118385600|107045500|4209c363-0657-42cc-a34a-da8bc31acfb9|00000000-0000-0000-0000-000000000000"
+      ],
       "meta": {
         "version": 2
       },
@@ -490,7 +492,7 @@
       "idf": "",
       "netlist": "",
       "plot": "Fabrication/",
-      "pos_files": "",
+      "pos_files": "Fabrication/",
       "specctra_dsn": "",
       "step": "KSS_V50.step",
       "svg": "",
@@ -500,7 +502,7 @@
   },
   "schematic": {
     "annotate_start_num": 0,
-    "bom_export_filename": "",
+    "bom_export_filename": "Fabrication\\KSS_V50.csv",
     "bom_fmt_presets": [],
     "bom_fmt_settings": {
       "field_delimiter": ",",
@@ -522,7 +524,7 @@
           "show": true
         },
         {
-          "group_by": true,
+          "group_by": false,
           "label": "Value",
           "name": "Value",
           "show": true
@@ -535,14 +537,14 @@
         },
         {
           "group_by": false,
-          "label": "Package",
-          "name": "Package",
-          "show": true
-        },
-        {
-          "group_by": false,
           "label": "Footprint",
           "name": "Footprint",
+          "show": false
+        },
+        {
+          "group_by": true,
+          "label": "DPN",
+          "name": "DPN",
           "show": true
         },
         {
@@ -559,8 +561,14 @@
         },
         {
           "group_by": false,
-          "label": "#",
-          "name": "${ITEM_NUMBER}",
+          "label": "Exclude from Board",
+          "name": "${EXCLUDE_FROM_BOARD}",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Exclude from Simulation",
+          "name": "${EXCLUDE_FROM_SIM}",
           "show": false
         },
         {
@@ -655,14 +663,14 @@
         },
         {
           "group_by": false,
-          "label": "MPN",
-          "name": "MPN",
+          "label": "JLC_PN",
+          "name": "JLC_PN",
           "show": true
         },
         {
           "group_by": false,
-          "label": "DPN",
-          "name": "DPN",
+          "label": "MPN",
+          "name": "MPN",
           "show": true
         },
         {
@@ -693,7 +701,7 @@
           "group_by": false,
           "label": "Dialectric",
           "name": "Dialectric",
-          "show": false
+          "show": true
         },
         {
           "group_by": false,
@@ -897,6 +905,24 @@
           "group_by": false,
           "label": "Description",
           "name": "Description",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Exclude from BOM",
+          "name": "${EXCLUDE_FROM_BOM}",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Package",
+          "name": "Package",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "#",
+          "name": "${ITEM_NUMBER}",
           "show": false
         }
       ],

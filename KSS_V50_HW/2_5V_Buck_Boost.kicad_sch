@@ -1445,7 +1445,6 @@
 	(hierarchical_label "VBAT_POS"
 		(shape input)
 		(at 62.23 88.9 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1640,7 +1639,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "GRM21BZ71E106KE15L"
+		(property "MPN" "GRM21BR61C106KE15K"
 			(at 224.79 111.76 0)
 			(effects
 				(font
@@ -1649,7 +1648,7 @@
 				(hide yes)
 			)
 		)
-		(property "DPN" "490-GRM21BZ71E106KE15LCT-ND"
+		(property "DPN" "490-6473-1-ND"
 			(at 224.79 111.76 0)
 			(effects
 				(font
@@ -1666,7 +1665,7 @@
 				)
 			)
 		)
-		(property "Dialectric" "X7R"
+		(property "Dialectric" "X5R"
 			(at 230.124 111.252 0)
 			(effects
 				(font
@@ -1674,7 +1673,7 @@
 				)
 			)
 		)
-		(property "Voltage Rating" "25V"
+		(property "Voltage Rating" "16V"
 			(at 229.87 113.03 0)
 			(effects
 				(font
@@ -1691,6 +1690,15 @@
 			)
 		)
 		(property "DKN" ""
+			(at 224.79 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC_PN" "C237493"
 			(at 224.79 111.76 0)
 			(effects
 				(font
@@ -1769,6 +1777,15 @@
 			)
 		)
 		(property "DKN" ""
+			(at 194.31 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC_PN" ""
 			(at 194.31 102.87 0)
 			(effects
 				(font
@@ -1890,6 +1907,15 @@
 				(hide yes)
 			)
 		)
+		(property "JLC_PN" "C95684"
+			(at 138.43 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "ea85c230-db02-4c9b-a489-6579365ffce7")
 		)
@@ -2002,6 +2028,15 @@
 				(hide yes)
 			)
 		)
+		(property "JLC_PN" "C114626"
+			(at 204.47 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "579d67ed-e1ac-4604-9854-d7fd37c82dd4")
 		)
@@ -2072,7 +2107,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "GRM21BZ71E106KE15L"
+		(property "MPN" "GRM21BR61C106KE15K"
 			(at 88.9 95.25 0)
 			(effects
 				(font
@@ -2081,7 +2116,7 @@
 				(hide yes)
 			)
 		)
-		(property "DPN" "490-GRM21BZ71E106KE15LCT-ND"
+		(property "DPN" "490-6473-1-ND"
 			(at 88.9 95.25 0)
 			(effects
 				(font
@@ -2098,7 +2133,7 @@
 				)
 			)
 		)
-		(property "Dialectric" "X7R"
+		(property "Dialectric" "X5R"
 			(at 83.566 94.742 0)
 			(effects
 				(font
@@ -2106,7 +2141,7 @@
 				)
 			)
 		)
-		(property "Voltage Rating" "25V"
+		(property "Voltage Rating" "16V"
 			(at 83.82 96.52 0)
 			(effects
 				(font
@@ -2123,6 +2158,15 @@
 			)
 		)
 		(property "DKN" ""
+			(at 88.9 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC_PN" "C237493"
 			(at 88.9 95.25 0)
 			(effects
 				(font
@@ -2266,7 +2310,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "GRM21BZ71E106KE15L"
+		(property "MPN" "GRM21BR61C106KE15K"
 			(at 165.1 95.25 0)
 			(effects
 				(font
@@ -2275,7 +2319,7 @@
 				(hide yes)
 			)
 		)
-		(property "DPN" "490-GRM21BZ71E106KE15LCT-ND"
+		(property "DPN" "490-6473-1-ND"
 			(at 165.1 95.25 0)
 			(effects
 				(font
@@ -2292,7 +2336,7 @@
 				)
 			)
 		)
-		(property "Dialectric" "X7R"
+		(property "Dialectric" "X5R"
 			(at 170.434 94.742 0)
 			(effects
 				(font
@@ -2300,7 +2344,7 @@
 				)
 			)
 		)
-		(property "Voltage Rating" "25V"
+		(property "Voltage Rating" "16V"
 			(at 170.18 96.52 0)
 			(effects
 				(font
@@ -2317,6 +2361,15 @@
 			)
 		)
 		(property "DKN" ""
+			(at 165.1 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC_PN" "C237493"
 			(at 165.1 95.25 0)
 			(effects
 				(font
@@ -2484,6 +2537,15 @@
 				(hide yes)
 			)
 		)
+		(property "JLC_PN" "C25838674"
+			(at 119.38 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "5153a1cf-5df6-4a79-9bef-01961a2eea35")
 		)
@@ -2566,6 +2628,15 @@
 			)
 		)
 		(property "DKN" ""
+			(at 180.34 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC_PN" ""
 			(at 180.34 88.9 0)
 			(effects
 				(font
@@ -2708,7 +2779,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "GRM21BZ71E106KE15L"
+		(property "MPN" "GRM21BR61C106KE15K"
 			(at 212.09 111.76 0)
 			(effects
 				(font
@@ -2717,7 +2788,7 @@
 				(hide yes)
 			)
 		)
-		(property "DPN" "490-GRM21BZ71E106KE15LCT-ND"
+		(property "DPN" "490-6473-1-ND"
 			(at 212.09 111.76 0)
 			(effects
 				(font
@@ -2734,7 +2805,7 @@
 				)
 			)
 		)
-		(property "Dialectric" "X7R"
+		(property "Dialectric" "X5R"
 			(at 217.424 111.252 0)
 			(effects
 				(font
@@ -2742,7 +2813,7 @@
 				)
 			)
 		)
-		(property "Voltage Rating" "25V"
+		(property "Voltage Rating" "16V"
 			(at 217.17 113.03 0)
 			(effects
 				(font
@@ -2759,6 +2830,15 @@
 			)
 		)
 		(property "DKN" ""
+			(at 212.09 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC_PN" "C237493"
 			(at 212.09 111.76 0)
 			(effects
 				(font
@@ -2807,7 +2887,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Inductor_SMD:L_Murata_DFE201610P"
+		(property "Footprint" "ap_built:L_Murata_DFE201610P"
 			(at 143.51 88.9 0)
 			(effects
 				(font
@@ -2876,6 +2956,15 @@
 			)
 		)
 		(property "DKN" ""
+			(at 143.51 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC_PN" "C882953"
 			(at 143.51 88.9 0)
 			(effects
 				(font

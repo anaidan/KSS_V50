@@ -23,9 +23,10 @@ INA236 INA236_mppt(0x41);
 #define MPPT_SHDN PIN_PB5
 #define CAP_SNS_OUT PIN_PC2
 
-const unsigned long hourInterval = 3600000; // 1 hour in milliseconds
-const unsigned long taskDuration = 300000*1; // 5 minutes in milliseconds
-unsigned long previousMillis = 0; // Tracks the last time the hourly task started
+
+volatile uint8_t minute_counter = 0;  // Keep track of elapsed minutes
+volatile uint8_t hour_flag = 0;  
+volatile uint8_t cap_sns_flag = 0;  
 
 void setup() {
 
@@ -53,8 +54,8 @@ void setup() {
   //measure(5, INA236_mppt);
 
    ADC0.CTRLA &= ~ADC_ENABLE_bm;
-   //PORTC.DIRCLR = PIN_PC2;
    PORTC.PIN2CTRL = PORT_ISC_RISING_gc;
+   RTC_init();
    sei();
    set_sleep_mode(SLEEP_MODE_PWR_DOWN);  /* Set sleep mode to POWER DOWN mode */
    sleep_enable();                       /* Enable sleep mode, but not going to sleep yet */
@@ -68,70 +69,62 @@ void loop() {
   sleep_cpu();
 
   sleep_disable();
- /*
-  unsigned long currentMillis = millis(); // Get the current time
 
-  // Check if an hour has passed
-  if (currentMillis - previousMillis >= hourInterval) {
-    previousMillis = currentMillis; // Update the previous time
-    //performHourlyTask(); // Call the function that runs for 5 minutes
-  }
- */
-  
-  TMC2300_enable();
+  if(cap_sns_flag==1 || hour_flag==1){
 
-  for(int i=0; i<500; i++){
-    digitalWrite(MOT_STEP_1, LOW);
-    digitalWrite(MOT_STEP_2, LOW);
-    delayMicroseconds(1500);
-    digitalWrite(MOT_STEP_1, HIGH);
-    digitalWrite(MOT_STEP_2, HIGH);
-    delayMicroseconds(1500);
-  }
-  //delay(5000);
-  //Serial.println("alive");
+    TMC2300_enable();
 
-  TMC2300_disable();
-
-
-
-}
-
-// Define the function to run every hour and last for 5 minutes
-void performHourlyTask() {
-  //Serial.println("Starting hourly task...");
-  TMC2300_enable();
-  unsigned long taskStartMillis = millis(); // Record the start time of the task
-  
-  // Stay in the task for 5 minutes
-  while (millis() - taskStartMillis < taskDuration) {
-    // Perform your task here
-    //Serial.println("Task is running...");
-    for(int i=0; i<1000; i++){
+    for(int i=0; i<500; i++){
       digitalWrite(MOT_STEP_1, LOW);
       digitalWrite(MOT_STEP_2, LOW);
-      delayMicroseconds(300);
+      delayMicroseconds(1500);
       digitalWrite(MOT_STEP_1, HIGH);
       digitalWrite(MOT_STEP_2, HIGH);
-      delayMicroseconds(300);
+      delayMicroseconds(1500);
     }
-    INA236_log(INA236_bat, INA236_mppt);
+    //delay(5000);
+    //Serial.println("alive");
 
-    //delay(10000); // Simulate work with a 1-second delay (adjust as needed)
+    TMC2300_disable();
+
+    if(cap_sns_flag==1 || hour_flag==1){
+      cap_sns_flag = 0;
+      hour_flag = 0;
+    }
   }
 
-  TMC2300_disable();
-  
-  //Serial.println("Hourly task completed.");
-}
 
-// sleep mode todo:
-// create 1 hr interrupt
-// create interrupt on CAP_SNS_OUT
+
+}
 
 ISR(PORTC_PORT_vect) {
     // Clear the interrupt flag
     PORTC.INTFLAGS = CAP_SNS_OUT;
+    cap_sns_flag = 1; 
+}
+
+// RTC PIT Interrupt Service Routine (fires every minute)
+ISR(RTC_PIT_vect) {
+    RTC.PITINTFLAGS = RTC_PI_bm;  // Clear interrupt flag
+
+    minute_counter++;
+    if (minute_counter >= 60) {  // 60 minutes = 1 hour
+        minute_counter = 0;
+        hour_flag = 1;
+    }
+}
+
+void RTC_init(){
+  while (RTC.STATUS > 0);  // Wait for synchronization
+  
+  // Enable the internal 32.768kHz oscillator for RTC
+  RTC.CLKSEL = RTC_CLKSEL_INT32K_gc;
+
+  // Enable RTC PIT with a 1-minute interval
+  //RTC.PITCTRLA = RTC_PERIOD_CYC32768_gc | RTC_PRESCALER_DIV60_gc | RTC_PITEN_bm; // 1-minute tick
+  RTC.PITCTRLA = RTC_PERIOD_CYC32768_gc | RTC_PITEN_bm;  // 1-second tick
+  RTC.PITINTCTRL = RTC_PI_bm;  // Enable periodic interrupt
+
 }
 
 void printConfig(INA236 INA)

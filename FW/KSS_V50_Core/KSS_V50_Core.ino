@@ -2,6 +2,7 @@
 #include <megaTinyCore.h>
 #include <INA236.h>
 #include <avr/sleep.h>
+#include <avr/interrupt.h>
 
 
 INA236 INA236_bat(0x40);
@@ -47,18 +48,27 @@ void setup() {
   TMC2300_enable();
   //measure(5, INA236_bat);
   //measure(5, INA236_mppt);
-  //TMC2300_disable();
+  TMC2300_disable();
   //measure(1, INA236_bat);
   //measure(5, INA236_mppt);
 
    ADC0.CTRLA &= ~ADC_ENABLE_bm;
+   //PORTC.DIRCLR = PIN_PC2;
+   PORTC.PIN2CTRL = PORT_ISC_RISING_gc;
+   sei();
    set_sleep_mode(SLEEP_MODE_PWR_DOWN);  /* Set sleep mode to POWER DOWN mode */
    sleep_enable();                       /* Enable sleep mode, but not going to sleep yet */
-
+   sleep_cpu();
 }
 
 void loop() {
+  
+  set_sleep_mode(SLEEP_MODE_PWR_DOWN);  /* Set sleep mode to POWER DOWN mode */
+  sleep_enable();                       /* Enable sleep mode, but not going to sleep yet */
+  sleep_cpu();
 
+  sleep_disable();
+ /*
   unsigned long currentMillis = millis(); // Get the current time
 
   // Check if an hour has passed
@@ -66,8 +76,10 @@ void loop() {
     previousMillis = currentMillis; // Update the previous time
     //performHourlyTask(); // Call the function that runs for 5 minutes
   }
-
+ */
   
+  TMC2300_enable();
+
   for(int i=0; i<500; i++){
     digitalWrite(MOT_STEP_1, LOW);
     digitalWrite(MOT_STEP_2, LOW);
@@ -76,8 +88,12 @@ void loop() {
     digitalWrite(MOT_STEP_2, HIGH);
     delayMicroseconds(1500);
   }
-  delay(5000);
-  Serial.println("alive");
+  //delay(5000);
+  //Serial.println("alive");
+
+  TMC2300_disable();
+
+
 
 }
 
@@ -112,6 +128,11 @@ void performHourlyTask() {
 // sleep mode todo:
 // create 1 hr interrupt
 // create interrupt on CAP_SNS_OUT
+
+ISR(PORTC_PORT_vect) {
+    // Clear the interrupt flag
+    PORTC.INTFLAGS = CAP_SNS_OUT;
+}
 
 void printConfig(INA236 INA)
 {

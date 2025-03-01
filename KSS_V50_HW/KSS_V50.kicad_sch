@@ -1,7 +1,7 @@
 (kicad_sch
-	(version 20231120)
+	(version 20250114)
 	(generator "eeschema")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(uuid "5c9f67fe-e435-446d-874d-cb2b418c1757")
 	(paper "A4")
 	(title_block
@@ -92,12 +92,17 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:+3.3V"
 			(power)
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0) hide)
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -169,7 +174,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 0) (xy 0 2.54)
+						(xy 0 2.54) (xy 0.762 1.27)
 					)
 					(stroke
 						(width 0)
@@ -181,7 +186,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
+						(xy 0 0) (xy 0 2.54)
 					)
 					(stroke
 						(width 0)
@@ -212,6 +217,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 	)
 	(junction
@@ -896,6 +902,10 @@
 	(sheet
 		(at 146.05 97.028)
 		(size 24.13 13.716)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
 		(stroke
 			(width 0.1524)
 			(type solid)
@@ -924,53 +934,53 @@
 		)
 		(pin "EN" input
 			(at 146.05 99.06 180)
+			(uuid "d64b2ecc-1f81-44e4-80bb-ab9f664392ad")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "d64b2ecc-1f81-44e4-80bb-ab9f664392ad")
 		)
 		(pin "DIR" input
 			(at 146.05 105.41 180)
+			(uuid "824bd9cd-b9ed-4f69-ab25-449d8a38c7d8")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "824bd9cd-b9ed-4f69-ab25-449d8a38c7d8")
 		)
 		(pin "STEP" input
 			(at 146.05 102.87 180)
+			(uuid "01f868e4-e5dd-4a3a-9e7e-7f4220f2969b")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "01f868e4-e5dd-4a3a-9e7e-7f4220f2969b")
 		)
 		(pin "HALL_OUT" output
 			(at 170.18 100.33 0)
+			(uuid "1f64ca48-77d6-435a-93ea-da82f83a51b1")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "1f64ca48-77d6-435a-93ea-da82f83a51b1")
 		)
 		(pin "VIO_MOT" input
 			(at 146.05 109.22 180)
+			(uuid "7292b48b-5475-43eb-b546-2772c78ca3b5")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "7292b48b-5475-43eb-b546-2772c78ca3b5")
 		)
 		(instances
 			(project "KSS_V50"
@@ -983,6 +993,10 @@
 	(sheet
 		(at 100.33 80.772)
 		(size 22.86 76.454)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
 		(fields_autoplaced yes)
 		(stroke
 			(width 0.1524)
@@ -1012,153 +1026,153 @@
 		)
 		(pin "MOT_STEP_1" output
 			(at 123.19 102.87 0)
+			(uuid "7f51c797-00ee-4cf4-b622-279cf26963b8")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "7f51c797-00ee-4cf4-b622-279cf26963b8")
 		)
 		(pin "MOT_DIR_1" output
 			(at 123.19 105.41 0)
+			(uuid "07a0f803-9ea2-4d74-8664-4312e5378ac0")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "07a0f803-9ea2-4d74-8664-4312e5378ac0")
 		)
 		(pin "HALL_IN_2" input
 			(at 123.19 135.89 0)
+			(uuid "8c4616cf-665c-4e4d-b015-bd546f4efa21")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "8c4616cf-665c-4e4d-b015-bd546f4efa21")
 		)
 		(pin "MOT_EN_2" output
 			(at 123.19 121.92 0)
+			(uuid "9c0a31a9-db38-4b09-9ad5-a8502c6ad987")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "9c0a31a9-db38-4b09-9ad5-a8502c6ad987")
 		)
 		(pin "MOT_STEP_2" output
 			(at 123.19 125.73 0)
+			(uuid "47d2e85d-5f8c-4d78-9564-e1a04a0aaa79")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "47d2e85d-5f8c-4d78-9564-e1a04a0aaa79")
 		)
 		(pin "MOT_DIR_2" output
 			(at 123.19 128.27 0)
+			(uuid "7f36862e-3e3a-4d63-8948-abdad65a831f")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "7f36862e-3e3a-4d63-8948-abdad65a831f")
 		)
 		(pin "MOT_EN_1" output
 			(at 123.19 99.06 0)
+			(uuid "a687b5ee-ae6f-4837-904d-a3aa1897e16d")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "a687b5ee-ae6f-4837-904d-a3aa1897e16d")
 		)
 		(pin "HALL_IN_1" input
 			(at 123.19 114.3 0)
+			(uuid "cbd1ab4d-fbbf-4763-b53a-f5e09a72bdf2")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "cbd1ab4d-fbbf-4763-b53a-f5e09a72bdf2")
 		)
 		(pin "SDA" input
 			(at 123.19 87.63 0)
+			(uuid "89374740-56ac-4abd-8f10-e28dc8629349")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "89374740-56ac-4abd-8f10-e28dc8629349")
 		)
 		(pin "SCL" input
 			(at 123.19 90.17 0)
+			(uuid "a7611659-1423-4ff1-8040-121d6a6fcb71")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "a7611659-1423-4ff1-8040-121d6a6fcb71")
 		)
 		(pin "MCU_UPDI" bidirectional
 			(at 123.19 144.78 0)
+			(uuid "01238528-4199-4dca-b64d-f97c7b3d4426")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "01238528-4199-4dca-b64d-f97c7b3d4426")
 		)
 		(pin "MCU_TX" output
 			(at 123.19 147.32 0)
+			(uuid "aed57fa4-cca0-4705-a4bf-d39726e72ea6")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "aed57fa4-cca0-4705-a4bf-d39726e72ea6")
 		)
 		(pin "MCU_RX" input
 			(at 123.19 149.86 0)
+			(uuid "402bb523-1353-4f81-9f8c-d67039119f0b")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "402bb523-1353-4f81-9f8c-d67039119f0b")
 		)
 		(pin "MPPT_SHDN" output
 			(at 123.19 82.55 0)
+			(uuid "be711653-1e5a-4720-b98a-ced788194700")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "be711653-1e5a-4720-b98a-ced788194700")
 		)
 		(pin "VIO_MOT" output
 			(at 123.19 154.94 0)
+			(uuid "4b34ec3a-6b28-4280-8e96-8651cbbe4f6b")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "4b34ec3a-6b28-4280-8e96-8651cbbe4f6b")
 		)
 		(instances
 			(project "KSS_V50"
@@ -1171,6 +1185,10 @@
 	(sheet
 		(at 146.05 74.93)
 		(size 21.59 7.62)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
 		(fields_autoplaced yes)
 		(stroke
 			(width 0.1524)
@@ -1200,33 +1218,33 @@
 		)
 		(pin "VBAT_POS" bidirectional
 			(at 167.64 78.74 0)
+			(uuid "0fff3285-ee6b-4d2c-a2e6-4887682285eb")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "0fff3285-ee6b-4d2c-a2e6-4887682285eb")
 		)
 		(pin "SCL" input
 			(at 146.05 80.01 180)
+			(uuid "0270b5cf-4759-4775-9c5b-7e4801bd02c1")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "0270b5cf-4759-4775-9c5b-7e4801bd02c1")
 		)
 		(pin "SDA" bidirectional
 			(at 146.05 77.47 180)
+			(uuid "20207b02-6764-45f7-9791-ae88da2e5c84")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "20207b02-6764-45f7-9791-ae88da2e5c84")
 		)
 		(instances
 			(project "KSS_V50"
@@ -1239,6 +1257,10 @@
 	(sheet
 		(at 146.05 142.748)
 		(size 22.352 10.16)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
 		(fields_autoplaced yes)
 		(stroke
 			(width 0.1524)
@@ -1268,33 +1290,33 @@
 		)
 		(pin "MCU_TX" input
 			(at 146.05 147.32 180)
+			(uuid "be2f8fa8-6073-4c9c-a579-14f10db90d40")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "be2f8fa8-6073-4c9c-a579-14f10db90d40")
 		)
 		(pin "MCU_RX" output
 			(at 146.05 149.86 180)
+			(uuid "5f688a33-4f5b-4370-b0a5-b0c6065d72cb")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "5f688a33-4f5b-4370-b0a5-b0c6065d72cb")
 		)
 		(pin "MCU_UPDI" bidirectional
 			(at 146.05 144.78 180)
+			(uuid "1bd26658-972b-4424-b6d2-c9306312b5ef")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "1bd26658-972b-4424-b6d2-c9306312b5ef")
 		)
 		(instances
 			(project "KSS_V50"
@@ -1307,6 +1329,10 @@
 	(sheet
 		(at 189.23 66.04)
 		(size 21.59 7.62)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
 		(fields_autoplaced yes)
 		(stroke
 			(width 0.1524)
@@ -1336,13 +1362,13 @@
 		)
 		(pin "VBAT_POS" input
 			(at 189.23 69.85 180)
+			(uuid "edc7c079-0704-45f2-9545-0bba0135d44a")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "edc7c079-0704-45f2-9545-0bba0135d44a")
 		)
 		(instances
 			(project "KSS_V50"
@@ -1355,6 +1381,10 @@
 	(sheet
 		(at 146.05 119.126)
 		(size 24.13 13.97)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
 		(stroke
 			(width 0.1524)
 			(type solid)
@@ -1383,53 +1413,53 @@
 		)
 		(pin "EN" input
 			(at 146.05 121.92 180)
+			(uuid "ee3a16f6-bd21-414f-a4e5-1ba337718fed")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "ee3a16f6-bd21-414f-a4e5-1ba337718fed")
 		)
 		(pin "DIR" input
 			(at 146.05 128.27 180)
+			(uuid "fe1a1b2e-5207-4345-b617-8e104251fe4a")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "fe1a1b2e-5207-4345-b617-8e104251fe4a")
 		)
 		(pin "STEP" input
 			(at 146.05 125.73 180)
+			(uuid "b49adb9b-d960-44f0-8174-f7e6f99e630e")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "b49adb9b-d960-44f0-8174-f7e6f99e630e")
 		)
 		(pin "HALL_OUT" output
 			(at 170.18 121.92 0)
+			(uuid "17da1b10-bc2d-4ea1-b059-3053880233ca")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "17da1b10-bc2d-4ea1-b059-3053880233ca")
 		)
 		(pin "VIO_MOT" input
 			(at 146.05 132.08 180)
+			(uuid "eb3f0bd1-6b21-4180-bfb4-9a20af5eedee")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "eb3f0bd1-6b21-4180-bfb4-9a20af5eedee")
 		)
 		(instances
 			(project "KSS_V50"
@@ -1442,6 +1472,10 @@
 	(sheet
 		(at 146.05 52.578)
 		(size 21.59 12.192)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
 		(fields_autoplaced yes)
 		(stroke
 			(width 0.1524)
@@ -1471,43 +1505,43 @@
 		)
 		(pin "MPPT_OUT" output
 			(at 167.64 58.42 0)
+			(uuid "4754105d-2153-41df-b95e-ac3b04c43dfa")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "4754105d-2153-41df-b95e-ac3b04c43dfa")
 		)
 		(pin "SCL" input
 			(at 146.05 57.15 180)
+			(uuid "d02f229d-7807-453b-baf6-1e675330cd26")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "d02f229d-7807-453b-baf6-1e675330cd26")
 		)
 		(pin "SDA" bidirectional
 			(at 146.05 54.61 180)
+			(uuid "60563daf-f75c-4d97-9f43-0ceef2b88afe")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "60563daf-f75c-4d97-9f43-0ceef2b88afe")
 		)
 		(pin "MPPT_SHDN" input
 			(at 146.05 62.23 180)
+			(uuid "dae44b83-d9fd-4216-a788-06e627fb4bf8")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "dae44b83-d9fd-4216-a788-06e627fb4bf8")
 		)
 		(instances
 			(project "KSS_V50"
@@ -1522,4 +1556,5 @@
 			(page "1")
 		)
 	)
+	(embedded_fonts no)
 )

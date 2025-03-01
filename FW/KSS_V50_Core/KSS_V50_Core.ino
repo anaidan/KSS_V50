@@ -28,6 +28,17 @@ volatile uint8_t minute_counter = 0;  // Keep track of elapsed minutes
 volatile uint8_t hour_flag = 0;  
 volatile uint8_t cap_sns_flag = 0;  
 
+long step_1_cnt = 0;
+
+long step_1_pos = 0;
+long step_2_pos = 0; 
+
+long max_pos = 3000;
+long min_pos = 0;
+
+int dir_1 = 0; // Towards panels
+int dir_2 = 0; // towards panels
+
 void setup() {
 
   pinMode_init();
@@ -64,8 +75,8 @@ void setup() {
 
 void loop() {
   
-  set_sleep_mode(SLEEP_MODE_PWR_DOWN);  /* Set sleep mode to POWER DOWN mode */
-  sleep_enable();                       /* Enable sleep mode, but not going to sleep yet */
+  set_sleep_mode(SLEEP_MODE_PWR_DOWN);  // Set sleep mode to POWER DOWN mode 
+  sleep_enable();                       // Enable sleep mode, but not going to sleep yet
   sleep_cpu();
 
   sleep_disable();
@@ -74,16 +85,14 @@ void loop() {
 
     TMC2300_enable();
 
-    for(int i=0; i<500; i++){
-      digitalWrite(MOT_STEP_1, LOW);
-      digitalWrite(MOT_STEP_2, LOW);
-      delayMicroseconds(1500);
-      digitalWrite(MOT_STEP_1, HIGH);
-      digitalWrite(MOT_STEP_2, HIGH);
-      delayMicroseconds(1500);
-    }
-    //delay(5000);
-    //Serial.println("alive");
+    //digitalWrite(MOT_DIR_1, HIGH);
+    //digitalWrite(MOT_DIR_2, LOW);
+
+    home();
+
+
+    Serial.println(digitalRead(HALL_IN_1));
+    Serial.println(digitalRead(HALL_IN_2));
 
     TMC2300_disable();
 
@@ -91,9 +100,103 @@ void loop() {
       cap_sns_flag = 0;
       hour_flag = 0;
     }
+
+    /*if(digitalRead(HALL_IN_1)==0){
+      digitalWrite(MOT_DIR_1, LOW);
+      Serial.println("end stop");
+      step_1_cnt = 0;
+      
+    }
+
+    if(step_1_cnt > 2000){
+      digitalWrite(MOT_DIR_1, HIGH);    
+      Serial.println("reverse");
+    }*/
+
   }
 
 
+
+}
+
+void home(){
+  digitalWrite(MOT_DIR_1, HIGH);
+  digitalWrite(MOT_DIR_2, LOW);
+
+  step_motors(10000, 2000);
+
+  step_1_pos = 0;
+  step_2_pos = 0;
+ 
+
+}
+
+void step_motors(long step_cnt, long speed){
+    for(int i=0; i<step_cnt; i++){
+      
+      digitalWrite(MOT_STEP_1, LOW);
+      digitalWrite(MOT_STEP_2, LOW);
+
+      delayMicroseconds(speed);
+      
+      if(digitalRead(HALL_IN_1)!=0){
+        digitalWrite(MOT_STEP_1, HIGH);
+      }
+      if(digitalRead(HALL_IN_2)!=0){
+        digitalWrite(MOT_STEP_2, HIGH);
+      }
+      
+      delayMicroseconds(speed);
+
+      if(digitalRead(HALL_IN_1)==0 && HALL_IN_2==0){
+        break;
+      }  
+    }  
+}
+
+void set_pos(long set_point_1, long speed_1, long set_point_2, long speed_2){
+  if(set_point_1>step_1_pos){
+    digitalWrite(MOT_DIR_1, LOW);
+    dir_1 = 1;
+  }
+  else{
+    digitalWrite(MOT_DIR_1, HIGH);
+    dir_1 = -1;
+  }
+
+  if(set_point_2>step_2_pos){
+    digitalWrite(MOT_DIR_2, HIGH);
+    dir_2 = 1;
+  }
+  else{
+    digitalWrite(MOT_DIR_2, LOW);
+    dir_2 = -1;
+  }  
+
+  long current_time = micros();
+  long prev_time    = micros();
+  digitalWrite(MOT_STEP_1, LOW);
+
+  while((abs(set_point_1-step_1_pos)>10) || (abs(set_point_1-step_1_pos)>10)){
+    
+    current_time = micros();
+    
+    if((current_time - prev_time) >= speed_1 && (abs(set_point_1-step_1_pos)>10)){
+      digitalWrite(MOT_STEP_1, HIGH);
+      step_1_pos+=dir_1;
+      prev_time = current_time;
+    }
+    digitalWrite(MOT_STEP_1, LOW);
+
+    current_time = micros();
+
+    if((current_time - prev_time) >= speed_2 && (abs(set_point_2-step_2_pos)>10)){
+      digitalWrite(MOT_STEP_2, HIGH);
+      step_2_pos+=dir_2;
+      prev_time = current_time;
+    }
+    digitalWrite(MOT_STEP_2, LOW);
+  }
 
 }
 
@@ -108,7 +211,7 @@ ISR(RTC_PIT_vect) {
     RTC.PITINTFLAGS = RTC_PI_bm;  // Clear interrupt flag
 
     minute_counter++;
-    if (minute_counter >= 60) {  // 60 minutes = 1 hour
+    if (minute_counter >= 20) {  // 60 minutes = 1 hour
         minute_counter = 0;
         hour_flag = 1;
     }
@@ -121,7 +224,7 @@ void RTC_init(){
   RTC.CLKSEL = RTC_CLKSEL_INT32K_gc;
 
   // Enable RTC PIT with a 1-minute interval
-  //RTC.PITCTRLA = RTC_PERIOD_CYC32768_gc | RTC_PRESCALER_DIV60_gc | RTC_PITEN_bm; // 1-minute tick
+  //RTC.PITCTRLA = RTC_PERIOD_CYC32768_gc | RTC_PITEN_bm;  // 64-second tick
   RTC.PITCTRLA = RTC_PERIOD_CYC32768_gc | RTC_PITEN_bm;  // 1-second tick
   RTC.PITINTCTRL = RTC_PI_bm;  // Enable periodic interrupt
 
@@ -186,8 +289,8 @@ void TMC2300_enable(){
   // Bring all MCU outputs low interfacing with motor driver, VIO/STBY ON
   digitalWrite(MOT_STEP_1, LOW);
   digitalWrite(MOT_STEP_2, LOW);
-  digitalWrite(MOT_DIR_1, LOW);
-  digitalWrite(MOT_DIR_2, LOW);
+  //digitalWrite(MOT_DIR_1, HIGH);
+  //digitalWrite(MOT_DIR_2, LOW);
   digitalWrite(MOT_EN_1, LOW);
   digitalWrite(MOT_EN_2, LOW);
   delay(5);
@@ -198,7 +301,7 @@ void TMC2300_enable(){
   
   // Turn VIO/STBY ON
   digitalWrite(MOT_STBY, LOW);
-  delay(5);
+  delay(500);
   
   // Turn Enables ON
   digitalWrite(MOT_EN_1, HIGH);

@@ -91,7 +91,7 @@ void loop() {
     home();
 
     for(int i=0; i<30; i++){
-      set_pos(random(0,40000), random(400,800), random(0,40000), random(400,800));
+      set_pos(random(-6000,40000), random(400,800), random(-6000,40000), random(400,800));
     }
     //set_pos(40000, 500, 40000, 500);
     //Serial.println(step_1_pos);
@@ -129,19 +129,26 @@ void loop() {
 }
 
 void home(){
+
+  digitalWrite(MOT_DIR_1, LOW);
+  digitalWrite(MOT_DIR_2, HIGH);
+
+  step_motors(80000, 200, 0); // away from hall
+
   digitalWrite(MOT_DIR_1, HIGH);
   digitalWrite(MOT_DIR_2, LOW);
 
-  step_motors(80000, 500);
+  step_motors(80000, 200, 1); // towards hall
+
   step_1_pos = 0;
   step_2_pos = 0;
-  set_pos(0, 500, 17000, 500); //offset
+  set_pos(0, 500, 17000, 200); //offset
   step_1_pos = 0;
   step_2_pos = 0;  
 
 }
 
-void step_motors(long step_cnt, long speed){
+void step_motors(long step_cnt, long speed, int towards){
     for(int i=0; i<step_cnt; i++){
       
       digitalWrite(MOT_STEP_1, LOW);
@@ -149,18 +156,28 @@ void step_motors(long step_cnt, long speed){
 
       delayMicroseconds(speed);
       
-      if(digitalRead(HALL_IN_1)!=0){
+      if(digitalRead(HALL_IN_1)!=0 && towards==1){
         digitalWrite(MOT_STEP_1, HIGH);
       }
-      if(digitalRead(HALL_IN_2)!=0){
+      else if(digitalRead(HALL_IN_1)!=1 && towards==0){
+        digitalWrite(MOT_STEP_1, HIGH);
+      }
+
+      if(digitalRead(HALL_IN_2)!=0 && towards==1){
         digitalWrite(MOT_STEP_2, HIGH);
       }
+      else if(digitalRead(HALL_IN_2)!=1 && towards==0){
+        digitalWrite(MOT_STEP_2, HIGH);
+      }      
       
       delayMicroseconds(speed);
 
-      if(digitalRead(HALL_IN_1)==0 && digitalRead(HALL_IN_2)==0){
+      if(digitalRead(HALL_IN_1)==0 && digitalRead(HALL_IN_2)==0 && towards==1){
         break;
-      }  
+      }
+      else if(digitalRead(HALL_IN_1)==1 && digitalRead(HALL_IN_2)==1 && towards==0){  
+        break;
+      }
     }  
 }
 

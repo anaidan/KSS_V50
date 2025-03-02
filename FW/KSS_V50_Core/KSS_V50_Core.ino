@@ -90,6 +90,15 @@ void loop() {
 
     home();
 
+    for(int i=0; i<30; i++){
+      set_pos(random(0,40000), random(400,800), random(0,40000), random(400,800));
+    }
+    //set_pos(40000, 500, 40000, 500);
+    //Serial.println(step_1_pos);
+    //Serial.println(step_2_pos);
+    //delay(3000);
+    set_pos(0, 500, 0, 500);
+    //home();
 
     Serial.println(digitalRead(HALL_IN_1));
     Serial.println(digitalRead(HALL_IN_2));
@@ -123,11 +132,12 @@ void home(){
   digitalWrite(MOT_DIR_1, HIGH);
   digitalWrite(MOT_DIR_2, LOW);
 
-  step_motors(10000, 2000);
-
+  step_motors(80000, 500);
   step_1_pos = 0;
   step_2_pos = 0;
- 
+  set_pos(0, 500, 17000, 500); //offset
+  step_1_pos = 0;
+  step_2_pos = 0;  
 
 }
 
@@ -148,7 +158,7 @@ void step_motors(long step_cnt, long speed){
       
       delayMicroseconds(speed);
 
-      if(digitalRead(HALL_IN_1)==0 && HALL_IN_2==0){
+      if(digitalRead(HALL_IN_1)==0 && digitalRead(HALL_IN_2)==0){
         break;
       }  
     }  
@@ -173,30 +183,37 @@ void set_pos(long set_point_1, long speed_1, long set_point_2, long speed_2){
     dir_2 = -1;
   }  
 
-  long current_time = micros();
-  long prev_time    = micros();
-  digitalWrite(MOT_STEP_1, LOW);
+  long current_time  = micros();
+  long prev_time_1   = micros();
+  long prev_time_2   = micros();
 
-  while((abs(set_point_1-step_1_pos)>10) || (abs(set_point_1-step_1_pos)>10)){
+
+  while((labs(set_point_1-step_1_pos)>10) || (labs(set_point_2-step_2_pos)>10)){
     
     current_time = micros();
     
-    if((current_time - prev_time) >= speed_1 && (abs(set_point_1-step_1_pos)>10)){
+    if((current_time - prev_time_1) >= speed_1 && (labs(set_point_1-step_1_pos)>10)){
       digitalWrite(MOT_STEP_1, HIGH);
       step_1_pos+=dir_1;
-      prev_time = current_time;
+      prev_time_1 = current_time;
+      delayMicroseconds(10);
     }
     digitalWrite(MOT_STEP_1, LOW);
 
     current_time = micros();
 
-    if((current_time - prev_time) >= speed_2 && (abs(set_point_2-step_2_pos)>10)){
+    if((current_time - prev_time_2) >= speed_2 && (labs(set_point_2-step_2_pos)>10)){
       digitalWrite(MOT_STEP_2, HIGH);
       step_2_pos+=dir_2;
-      prev_time = current_time;
+      prev_time_2 = current_time;
+      delayMicroseconds(10);
     }
     digitalWrite(MOT_STEP_2, LOW);
   }
+
+  Serial.println(labs(set_point_1-step_1_pos));
+  Serial.println(labs(set_point_2-step_2_pos));
+
 
 }
 
@@ -211,7 +228,7 @@ ISR(RTC_PIT_vect) {
     RTC.PITINTFLAGS = RTC_PI_bm;  // Clear interrupt flag
 
     minute_counter++;
-    if (minute_counter >= 20) {  // 60 minutes = 1 hour
+    if (minute_counter >= 10) {  // 60 minutes = 1 hour
         minute_counter = 0;
         hour_flag = 1;
     }
